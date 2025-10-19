@@ -8,6 +8,10 @@ public class Uygulama {
         tekList.basaEkle(3);
         tekList.sonaEkle(20);
 
+        //tekList.bastanSil();
+        tekList.sondanSil();
+        tekList.sondanSil();
+        tekList.sondanSil();
 
         tekList.yazdir();
     }

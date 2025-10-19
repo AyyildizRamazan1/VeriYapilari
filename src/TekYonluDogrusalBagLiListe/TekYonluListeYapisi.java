@@ -35,6 +35,56 @@ public class TekYonluListeYapisi {
         }
     }
 
+    void arayaEkle(int indis, int x) {
+        Node eleman = new Node();
+        eleman.data = x;
+        if (head == null && indis == 0) {
+            eleman.next = null;
+            head = eleman;
+            tail = eleman;
+            System.out.println("Liste yapısı oluştu, ilk eleman eklendi");
+        } else if (head != null && indis == 0) {
+            eleman.next = head;
+            head = eleman;
+            System.out.println(indis + " indisinci siraya yeni eleman eklendi");
+        } else {
+
+        }
+    }
+
+    void bastanSil() {
+        if (head == null) {
+            System.out.println("Liste bos, silinecek nesne yok");
+        } else if (head.next == null) {
+            head = null;
+            tail = null;
+            System.out.println("Listede kalan son elemanda silindi");
+        } else {
+            head = head.next;
+            System.out.println("Bastaki eleman silindi");
+        }
+    }
+
+    void sondanSil() {
+        if (head == null) {
+            System.out.println("Liste bos, silinecek nesne yok");
+        } else if (head.next == null) {
+            head = null;
+            tail = null;
+            System.out.println("Listede kalan son elemanda silindi");
+        } else {
+            Node temp = head;
+            Node temp2 = head;
+            while (temp.next != null) {
+                temp2 = temp;
+                temp = temp.next;
+            }
+            temp2.next = null;
+            tail = temp2;
+            System.out.println("Sondan eleman silindi ");
+        }
+    }
+
     void yazdir() {
         if (head == null) {
             System.out.println("Liste yapisi boş");
